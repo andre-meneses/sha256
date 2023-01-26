@@ -16,7 +16,10 @@ int main()
     std::vector <uint32_t> hash_values_init;
     std::vector <uint32_t> words;
 
-    std::string str = "abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq";
+    std::string str;
+    std::cout << "String to be hashed: " << std::endl;
+    std::getline(std::cin,str);
+
     std::string binary = toBinary(str);
 
     std::string s = pad_message(binary);
@@ -52,8 +55,10 @@ int main()
 
     for(int i = 0; i < 8; i++)
     {
-        std::cout << std::hex << hash_values[i] << std::endl;
+        std::cout << std::hex << hash_values[i];
     }
+
+    std::cout << std::endl;
 
     return 0;
 }
